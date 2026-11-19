@@ -1,0 +1,22 @@
+public class Cliente {
+    String nombre;
+    int puntos;
+
+    void sumarPuntos(int compra) {
+        puntos = puntos + compra / 1000;
+    }
+
+    boolean puedeCanjear() {
+        return puntos >= 50;
+    }
+
+    void canjear() {
+        if (puedeCanjear()) {
+            puntos -= 50;
+        }
+    }
+
+    String tarjeta() {
+        return nombre + ": " + puntos + " puntos";
+    }
+}

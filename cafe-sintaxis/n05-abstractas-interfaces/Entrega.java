@@ -1,0 +1,14 @@
+public abstract class Entrega {
+    private final int pedidoId;
+
+    protected Entrega(int pedidoId) {
+        this.pedidoId = pedidoId;
+    }
+
+    public int getPedidoId() { return pedidoId; }
+    public abstract int costo();
+
+    public String resumen() {
+        return "Pedido #" + pedidoId + " - costo entrega: $" + costo();
+    }
+}
